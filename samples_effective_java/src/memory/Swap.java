@@ -25,9 +25,16 @@ public class Swap {
         a= b;
         b=temp;
     }
+    public static void swap(int x, int y){
+        int temp =x;
+        x= y;
+        y=temp;
+    }
 
     public static void main(String[] args) {
         Swap s = new Swap(2,3);
+        s.swap(s.a, s.b);
+        System.out.println(a+" "+b);
 
         s.swap();
         System.out.println(a+" "+b);
