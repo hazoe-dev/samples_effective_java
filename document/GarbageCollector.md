@@ -20,6 +20,9 @@ Stack gồm: a  trỏ đến “Zoe”, b trỏ đến “Ha”
 Heap gồm “Zoe”,”Ha”  
 Stack khác: x=a  trỏ đến “Zoe”, y=b trỏ đến “Ha”  
 
+ ![CallStack-Stack-Heap](https://github.com/hazoe-dev/samples_effective_java/blob/main/assets/images/GC.png)
+ 
+
 > - Stack: local/method variable or giá trị primary type
 > - In java, truyền tham trị (argument not parameter)
 
