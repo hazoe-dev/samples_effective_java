@@ -79,10 +79,11 @@ flowchart TB
         p~~~r
         p2 --> h1
     end
+    s4 --> h1
+    s7--> h1
+    s8  --> p
+    s5 --> p
     
-    s4 & s7--> h1
-    s8 --> p
-
     c1~~~m1
     c2~~~m2
     c3~~~m3
