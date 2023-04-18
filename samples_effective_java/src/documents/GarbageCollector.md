@@ -27,7 +27,8 @@ flowchart TB
     subgraph g1[CallStack]
         direction TB
         c1[main]
-        c2["main-Person(int,String)"]
+        c2["main-Person
+        (int,String)"]
         c3[main]
         c4[exit]
         
@@ -39,22 +40,30 @@ flowchart TB
     subgraph g2[Stack]
         direction TB
         subgraph m1[main]
-            s1(["integer value: [childAge=4]"])
-            s2(["String reference: myName"])
+            s1(["integer value:
+            [childAge=4]"])
+            s2(["String reference:
+            myName"])
         end
         
         subgraph m2[main-Person]
             direction TB
-            s3(["integer value: age=[childAge value]=4"])
-            s4(["String reference: name=[myName value]"])
-            s5(["Person reference: this"])
+            s3(["integer value:
+            age=[childAge value]=4"])
+            s4(["String reference:
+            name=[myName value]"])
+            s5(["Person reference:
+            this"])
         end
 
         subgraph m3[main]
             direction TB
-            s6(["integer value: [childAge=4]"])
-            s7(["String reference: myName"])
-            s8(["Person reference: childPerson"])
+            s6(["integer value:
+            [childAge=4]"])
+            s7(["String reference:
+            myName"])
+            s8(["Person reference:
+            childPerson"])
         end
 
         subgraph m4[exit]
@@ -77,10 +86,11 @@ flowchart TB
         end
         h1~~~p
         p~~~r
-        p2 --> h1
+        p2 -.-> h1
     end
-    s4 --> h1
-    s7--> h1
+    s2 -.-> h1
+    s4 -.-> h1
+    s7 -.-> h1
     s8  --> p
     s5 --> p
     
