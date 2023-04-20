@@ -4,9 +4,10 @@ public class Person {
     int age;
     String name;
 
-    public Person (int age, String name) {
-        this.age = age;
-        this.name = name;
+    public Person (int specificAge , String specificName)
+    {
+        this.age = specificAge;
+        this.name = specificName;
     }
 
     @Override
@@ -16,7 +17,7 @@ public class Person {
 
     public static void main(String[] args) {
         int childAge = 4;
-        String myName = "HaThiThuTran";
+        String myName = "HaTran";
 
         Person childPerson = new Person(childAge, myName);
     }
