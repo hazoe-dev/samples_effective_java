@@ -18,6 +18,9 @@ public class ClassBone extends Animal implements Equitable{
         if(!super.equals(o)) return false;
 
         Animal animal = (Animal) o;
+        if(animal.livingInWater == true){
+            return true;
+        }
         return animal.havingBold == true && animal.livingInWater == false;
     }
 
