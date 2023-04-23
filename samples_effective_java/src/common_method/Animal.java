@@ -56,4 +56,5 @@ public abstract class Animal implements Equitable{
     public int hashCode() {
         return Objects.hash(name);
     }
+
 }
