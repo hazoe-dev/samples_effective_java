@@ -16,5 +16,10 @@ public class Main {
             System.out.println("i = " + i);
         }
         Person p = new Person(12, "ha");
+        try {
+            p.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
