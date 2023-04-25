@@ -24,6 +24,12 @@ Ta có:
 
 ![CallStack-Stack-Heap-Diagram](GarbageCollector.png)
 
+Vậy trên heap, 1 Person khoảng bao nhiêu byte nếu 1 reference object giả sử là 8?  
+- Person object : this = 8 byte  
+- String : name = 8 byte  
+- int : age = 4 byte  
+=> Tổng là 20 byte
+
 > - Heap: chứa giá trị của các biến
 > - Stack: 
 >  - Primitive variable: tên biến và giá trị của biến đó có kích thước primitive data type tương ứng
