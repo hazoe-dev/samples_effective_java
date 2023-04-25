@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Food implements Cloneable{
+    final int star = 4;
     private int weight;
     List<Chicken> chickens= new ArrayList<>();
     Chicken[] elements = new Chicken[3];
