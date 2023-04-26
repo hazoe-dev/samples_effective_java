@@ -2,7 +2,7 @@ package common_method.lombok;
 
 import lombok.EqualsAndHashCode;
 //luon chi dinh ro cac nao @EqualsAndHashCode.Include
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(callSuper=true)
 public class Book extends Product{
     @EqualsAndHashCode.Exclude private int publishingYear;
     @EqualsAndHashCode.Include static int count;//static -> lombok exclude
