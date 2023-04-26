@@ -5,9 +5,19 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode
 public class Book {
     @EqualsAndHashCode.Exclude private int publishingYear;
-    
+    @EqualsAndHashCode.Include static int count;//static -> lombok exclude
+    //because static -> class memory: all variables have one value.
     public Book(int publishingYear) {
         this.publishingYear = publishingYear;
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public static void setCount(int count) {
+        Book.count = count;
     }
 
     public static void main(String[] args) {
