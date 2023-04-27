@@ -9,9 +9,10 @@ Ta có:
         int age;
         String name;
     
-        public Person (int age, String name) {
-            this.age = age;
-            this.name = name;
+        public Person (int specificAge , String specificName)
+        {
+            this.age = specificAge;
+            this.name = specificName;
         }
     
         public static void main(String[] args) {
