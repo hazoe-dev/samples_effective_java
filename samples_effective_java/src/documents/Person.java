@@ -28,10 +28,6 @@ public class Person implements Cloneable{
     public Person clone() throws CloneNotSupportedException {
         return (Person) super.clone();
     }
-//    @Override
-//    protected Object clone() throws CloneNotSupportedException {
-//        return super.clone();
-//    }
 
     @Override
     public boolean equals(Object o) {

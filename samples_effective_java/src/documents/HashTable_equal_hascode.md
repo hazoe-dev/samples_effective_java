@@ -106,12 +106,12 @@ Mô hình của HashMap
 #### Methods:
 ##### put(node)
 1. Tính hashCode key của node
-2. Tính index: hashCode&(n-1)  
+2. Tính index hay bucket number: = hashCode & (n-1)  
 Với n là size của HashMap, default là 16 (0-15)  
-Vd: index =4 
+Vd: index = 4 
 Nếu bucket 4 không có node thì lưu node vào index=4 trong HashMap collection.  
 Ngược lại, tiếp tục.  
-3. Hash collision: Nhiều key cùng index. Tính hashcode của chúng, dùng equals to compare equal.  
+3. Hash collision: Nhiều key cùng index. Tính hashcode của chúng, dùng equals() to compare equal.  
 Nếu bằng thì thay thế.  
 Nếu không thì liên kết với node đã tồn tại dạng LinkedList, set next là null.  
 ##### get(key)
