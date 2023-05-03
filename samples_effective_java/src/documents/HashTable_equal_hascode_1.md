@@ -38,15 +38,112 @@ Vì đây là common method trong Object class nếu nếu định nghĩa bạn 
 ##### Điều gì xảy ra khi vi phạm contract:
 ######   Với Symmetric, bạn có thể bị vi phạm khi dùng inheritance
 Example:
+https://github.com/hazoe-dev/samples_effective_java/tree/common-method/samples_effective_java/src/common_method/equal_hashcode
 
-Coding ….
+```
+public class Book {
+    String name;
+    int numberPublish;
+    String author;
+
+    public Book(String name, int numberPublish, String author) {
+        this.name = name;
+        this.numberPublish = numberPublish;
+        this.author = author;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book))
+            return false;
+        Book book = (Book) o;
+        boolean nameEqual = (this.name == null && book.name==null)||(this.name!=null && this.name.equals(book.name));
+        boolean authorEqual = (this.author == null && book.author==null)||(this.author!=null && this.author.equals(book.author));
+        return numberPublish == book.numberPublish && nameEqual && authorEqual;
+    }
+    //other methods
+}
+
+public class SelfHelp extends Book{
+    private int quantityBook;
+
+    public SelfHelp(String name, int numberPublish, String author, int quantityBook) {
+        super(name, numberPublish, author);
+        this.quantityBook = quantityBook;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof SelfHelp)) return false;
+        if (!super.equals(o)) return false;
+        SelfHelp book = (SelfHelp) o;
+        boolean nameEqual = (this.name == null && book.name==null)||(this.name!=null && this.name.equals(book.name));
+        boolean authorEqual = (this.author == null && book.author==null)||(this.author!=null && this.author.equals(book.author));
+        return quantityBook == book.quantityBook && numberPublish == book.numberPublish && nameEqual && authorEqual;
+    }
+     //other methods
+}
+
+public class BookStore {
+    public static void main(String[] args) {
+        Book book1 = new Book("Habits", 2019, "James");
+        SelfHelp selfHelpBook = new SelfHelp("Habits", 2019, "James", 100);
+
+        boolean b1 =selfHelpBook.equals(book1);//false : expected
+        boolean b = book1.equals(selfHelpBook); //true : wrong
+
+        System.out.println((b1==b) +" =>violate symmetric because use instanceof with inheritance" );
+    }
+}
+```
 
 
 **Fix = compositions -> Favor composition over inheritance**
 
-Coding …
+```
+public class Book {
+    String name;
+    int numberPublish;
+    String author;
 
-**Fix = good hashCode**
+    SelfHelp selfHelp;
+
+    public Book(String name, int numberPublish, String author, SelfHelp selfHelp) {
+        this.name = name;
+        this.numberPublish = numberPublish;
+        this.author = author;
+        this.selfHelp = selfHelp;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book))
+            return false;
+        Book book = (Book) o;
+        boolean nameEqual = (this.name == null && book.name==null)||(this.name!=null && this.name.equals(book.name));
+        boolean authorEqual = (this.author == null && book.author==null)||(this.author!=null && this.author.equals(book.author));
+        boolean selfHelpEqual = this.selfHelp.equals(((Book) o).selfHelp);
+        return numberPublish == book.numberPublish && nameEqual && authorEqual && selfHelpEqual;
+    }
+```
+
+**Fix = good equals  
+Trong class Book:
+```
+@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        boolean nameEqual = (this.name == null && book.name==null)||(this.name!=null && this.name.equals(book.name));
+        boolean authorEqual = (this.author == null && book.author==null)||(this.author!=null && this.author.equals(book.author));
+        return numberPublish == book.numberPublish && nameEqual && authorEqual;
+    }
+
+```
 
 
 ### Hashcode
