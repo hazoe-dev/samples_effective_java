@@ -27,7 +27,7 @@ Bạn không cần override nếu:
 Nếu bạn muốn so sách bằng cho giá trị thì override:  
 Vì đây là common method trong Object class nếu nếu định nghĩa bạn phải tuân thủ general contract để các lớp khác có thể vận hành đúng. Ví dự như HashMap.
 
-###### General contract :
+**General contract :**
 
 1. x.equals(x) = true : **Reflective** - phản xạ
 2. x.equals(y) = y.equals(x) : **Symmetric** - đối xứng
@@ -234,7 +234,7 @@ HashMap có các khái niệm sau:
 
 ##### Cách methods hoạt động:
 
-###### Method put(node):
+**Method put(node):**  
 1. Check **key == null** ? [chạy **putForNullKey() - table[0]** ] : next step
 2. Tính hash code cho key bằng hashCode()
 3. Tính index lưu node: index = bucket number = hashCode & (n-1)
@@ -243,10 +243,11 @@ HashMap có các khái niệm sau:
       Nếu bucket 4 không có node thì lưu node vào index=4 trong HashMap collection.  
       Ngược lại, tiếp tục.
 4. Hash collision: (Nhiều key cùng index.) Key của node equals() to compare keys đã tồn tại trong bucket trên.
+
    Nếu key **bằng** key đã tồn tại thì **thay thế** giá trị key cũ.  
    Nếu **không** thì **liên kết với node đã tồn tại** dạng LinkedList, set next là null.
 
-###### Method get(key):
+ **Method get(key):**
 1. Tính hashCode của key
 2. Tính index của bucket sẽ lưu node cần lấy ra
 3. Compare  key ta có bằng method equals() với first element trong bucket đã tính được ở trên.  
@@ -255,17 +256,17 @@ HashMap có các khái niệm sau:
    Tức là, mình check field next trong node đang xét: nếu != null thì so sánh key tiếp, ngược lại trả về null.
 
 Như vậy, ta có giảm thiếu số lần search.
-Thay vì search all phần từ, ta dựa vào index của bucket tính bằng hashCode để giảm độ phức tạp của bài toán.  
+Thay vì search all phần từ, ta dựa vào index của bucket tính bằng hashCode để giảm độ phức tạp của bài toán.
 Thay vì search n phần tử -> x buckets (x<=n), sau đó là tìm trong một bucket.
 
 ### Quá khứ và hiện tại
 
-Điều gì đã thay đổi.
+Điều gì đã thay đổi?
 Bạn không còn cần hiện thực hashCode hay equals nữa.
 
 Mình có 2 approaches:
-1. Imperative: focus on how,implementation details
-2. Declarative: focus on what, problem-solving
+1. **Imperative**: focus on how,implementation details
+2. **Declarative**: focus on what, problem-solving
 
 Với cách tiếp cận thứ 2, bạn không cần hiện thực hashcode và equals.   
 Bạn có thể sử dụng lombok.
@@ -273,10 +274,10 @@ Bạn có thể sử dụng lombok.
 ví dụ:
 https://github.com/hazoe-dev/samples_effective_java/blob/b0a97811bc1627c0a9e54eb4b2810c3bf735899d/samples_effective_java/src/common_method/lombok/Book.java#L3
 
-Mình nghĩ sẽ đọc thêm về phần này ở đây!    
+Mình để phần phần này ở đây để đọc thêm!  
 Declarative Programming in Spring  
 From How to What: The Evolution of Programming Paradigms  
-https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
+https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/  
 https://dev.to/dchhitarka/introduction-to-programming-what-is-programming-paradigm-3le1
 
 
