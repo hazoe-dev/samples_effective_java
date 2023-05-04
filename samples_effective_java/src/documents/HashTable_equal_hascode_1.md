@@ -15,11 +15,11 @@ So sánh hai đối tượng và kết luận chúng bằng nhau không.
 Nhưng có hai kiểu bằng nhau:
 1. **Identity**: 2 đối tượng trỏ đến cùng vùng nhớ thì bằng nhau.
 2. **Equivalence** relation: quan hệ tương đương của các đối tượng khác null để so sánh những attribute của 2 đối tượng nếu chúng tương đương thì bằng.
-Cái này mình hay dùng cho tập hợp **Set** để đảm bảo không tồn tại giá trị trùng nhau trong tập hợp. Còn Set mình hay dùng là **key**.
+   Cái này mình hay dùng cho tập hợp **Set** để đảm bảo không tồn tại giá trị trùng nhau trong tập hợp. Còn Set mình hay dùng là **key**.
 
 ##### Khi nào cần override?
 
-Bạn không cần override nếu:  
+Bạn không cần override nếu:
 * Lớp cha đã có hàm equals bạn muốn. Vd: bạn check 2 đối tượng class Random để chắc rằng nó khác với cái trước đó nhưng nếu vậy thì hàm mặc định của Object là đủ.
 * Bạn không quan tâm giá trị - values. Vd Thread, mỗi đối tượng nên là duy nhất - unique.
 * Bạn không cần định nghĩa khi nó không thể được gọi. VD: equals trong private class.
@@ -155,7 +155,7 @@ Cụ thể là **hash-base collections như HashMap, HashTable, HashSet**.
 Ồ như vậy, nếu bạn không dùng đến hash thì mọi thứ vẫn chạy ro ro đúng không.  
 Nhưng nếu một ngày đẹp trời, bạn lấy một HashMap object dễ thương ra dùng và một bé bug có thể gây rắc rối đấy. Bạn có thể sẽ không nhìn thấy rủi ro ở đây nữa cơ vì tâm trí bạn là một function khác rồi a!  
 Vậy nên ta có rule sau:  
-**Nếu override equals(), mình luôn override thêm hashCode()** nhá!  
+**Nếu override equals(), mình luôn phải override thêm hashCode()**!
 
 ###### Contract của hashCode:
 
@@ -170,10 +170,10 @@ Vậy nên ta có rule sau:
 
 1. Chọn một constant ví dụ 17
 2. Chọn các significant attribute theo business logic của bạn.
-3. Tính giá trị cho các attribute như sau:  
-   * Nếu là primitive: chuyển về số nguyên kiểu int  
-   * Nếu là reference: tính từ các attribute của nó, phức tạp quá cho luôn một contant  
-   * Nếu là array: hashcode = hashcode * constant  + elementHashCode ; nó giống vầy nè:  [result = result  * 31  +c]
+3. Tính giá trị cho các attribute như sau:
+    * Nếu là primitive: chuyển về số nguyên kiểu int
+    * Nếu là reference: tính từ các attribute của nó, phức tạp quá cho luôn một contant
+    * Nếu là array: hashcode = hashcode * constant  + elementHashCode ; nó giống vầy nè:  [result = result  * 31  +c]
 7. Return
 8. Test
 
@@ -219,12 +219,12 @@ Gồm các class hiện thực:
 #### HashMap
 Đại diện cho hash-base collections dùng hash table để lưu và search, ta xem xét HashMap.
 
-##### Mô hình:  
+##### Mô hình:
 
-Sử dụng kĩ thuật hashing. Hashing đơn giản là một method tạo ra một số nguyên duy nhất đại diện cho 1 object.   
+Sử dụng kĩ thuật hashing. Hashing đơn giản là một method tạo ra một số nguyên duy nhất đại diện cho 1 object.
 
-HashMap có các khái niệm sau:  
-* HashMap chứa 1 mảng buckets.  
+HashMap có các khái niệm sau:
+* HashMap chứa 1 mảng buckets.
 * Bucket chứa 1 linkedList chứa các nodes
 * Node chứa key, value.
 
@@ -232,29 +232,33 @@ HashMap có các khái niệm sau:
 ![HashMap](HashMap.png)
 
 
-##### Cách methods hoạt động:  
+##### Cách methods hoạt động:
 
-Method put(node): 
+###### Method put(node):
 1. Check **key == null** ? [chạy **putForNullKey() - table[0]** ] : next step
 2. Tính hash code cho key bằng hashCode()
 3. Tính index lưu node: index = bucket number = hashCode & (n-1)
-   * Với n là size của HashMap, default là 16 (0-15)  
+    * Với n là size của HashMap, default là 16 (0-15)  
       Vd: index = 4
-     Nếu bucket 4 không có node thì lưu node vào index=4 trong HashMap collection.  
+      Nếu bucket 4 không có node thì lưu node vào index=4 trong HashMap collection.  
       Ngược lại, tiếp tục.
 4. Hash collision: (Nhiều key cùng index.) Key của node equals() to compare keys đã tồn tại trong bucket trên.
-      Nếu key **bằng** key đã tồn tại thì **thay thế** giá trị key cũ.  
-      Nếu **không** thì liên **kết với node đã tồn tại** dạng LinkedList, set next là null.  
+   Nếu key **bằng** key đã tồn tại thì **thay thế** giá trị key cũ.  
+   Nếu **không** thì **liên kết với node đã tồn tại** dạng LinkedList, set next là null.
 
-Method get(key):  
+###### Method get(key):
 1. Tính hashCode của key
-2. Tính index
-3. Compare  key bằng equals với first element trong bucket.  
-   Nếu bằng, trả giá trị value. Ngược lại, check next nếu có để check tiếp. Không có trả null.
+2. Tính index của bucket sẽ lưu node cần lấy ra
+3. Compare  key ta có bằng method equals() với first element trong bucket đã tính được ở trên.  
+   Nếu key bằng first key, trả giá trị value của node đó.  
+   Ngược lại thì tiếp tục check key với các node khác trong LinkedList của bucket này.
+   Tức là, mình check field next trong node đang xét: nếu != null thì so sánh key tiếp, ngược lại trả về null.
 
-Như vậy, ta có giảm thiếu số lần search, về dựa vào index tình từ hashCode. Thay vì search all phần từ thành n buckets, sau đó là tìm trong một bucket.
+Như vậy, ta có giảm thiếu số lần search.
+Thay vì search all phần từ, ta dựa vào index của bucket tính bằng hashCode để giảm độ phức tạp của bài toán.  
+Thay vì search n phần tử -> x buckets (x<=n), sau đó là tìm trong một bucket.
 
-### Quá khứ và hiện tại   
+### Quá khứ và hiện tại
 
 Điều gì đã thay đổi.
 Bạn không còn cần hiện thực hashCode hay equals nữa.
@@ -264,11 +268,12 @@ Mình có 2 approaches:
 2. Declarative: focus on what, problem-solving
 
 Với cách tiếp cận thứ 2, bạn không cần hiện thực hashcode và equals.   
-Bạn có thể sử dụng lombok. 
+Bạn có thể sử dụng lombok.
 
 ví dụ:
 https://github.com/hazoe-dev/samples_effective_java/blob/b0a97811bc1627c0a9e54eb4b2810c3bf735899d/samples_effective_java/src/common_method/lombok/Book.java#L3
 
+Mình nghĩ sẽ đọc thêm về phần này ở đây!  
 Declarative Programming in Spring  
 From How to What: The Evolution of Programming Paradigms  
 https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
