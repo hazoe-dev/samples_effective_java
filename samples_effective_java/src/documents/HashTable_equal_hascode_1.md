@@ -273,7 +273,7 @@ Bạn có thể sử dụng lombok.
 ví dụ:
 https://github.com/hazoe-dev/samples_effective_java/blob/b0a97811bc1627c0a9e54eb4b2810c3bf735899d/samples_effective_java/src/common_method/lombok/Book.java#L3
 
-Mình nghĩ sẽ đọc thêm về phần này ở đây!  
+Mình nghĩ sẽ đọc thêm về phần này ở đây!    
 Declarative Programming in Spring  
 From How to What: The Evolution of Programming Paradigms  
 https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
