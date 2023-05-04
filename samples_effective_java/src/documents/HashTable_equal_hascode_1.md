@@ -259,9 +259,22 @@ Như vậy, ta có giảm thiếu số lần search.
 Thay vì search all phần từ, ta dựa vào index của bucket tính bằng hashCode để giảm độ phức tạp của bài toán.
 Thay vì search n phần tử -> x buckets (x<=n), sau đó là tìm trong một bucket.
 
+Vì vậy, nếu bạn đảm bảo được các object không bằng nhau có hash code khác nhau thì hash-base collections của bạn sẽ hoạt động đúng. Nếu trùng chúng sẽ bị thay thế.
+
+**Hash table**
+
+| Algorithm | Average  | Worst case |
+|-----------|-----------|------------|
+| Space     | 	Θ(n)     | 	O(n)      |
+| Search    | 	Θ(1)     | 	O(n)      |
+| Insert    | 	Θ(1)     | 	O(n)      |
+| Delete    | 	Θ(1)     | 	O(n)      |
+
+Thông tin số liệu trên lấy từ: https://en.wikipedia.org/wiki/Hash_table
+
 ### Quá khứ và hiện tại
 
-Điều gì đã thay đổi?
+Điều gì đã thay đổi?  
 Bạn không còn cần hiện thực hashCode hay equals nữa.
 
 Mình có 2 approaches:
