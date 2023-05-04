@@ -155,7 +155,7 @@ Cụ thể là **hash-base collections như HashMap, HashTable, HashSet**.
 Ồ như vậy, nếu bạn không dùng đến hash thì mọi thứ vẫn chạy ro ro đúng không.  
 Nhưng nếu một ngày đẹp trời, bạn lấy một HashMap object dễ thương ra dùng và một bé bug có thể gây rắc rối đấy. Bạn có thể sẽ không nhìn thấy rủi ro ở đây nữa cơ vì tâm trí bạn là một function khác rồi a!  
 Vậy nên ta có rule sau:  
-**Nếu override equals(), mình luôn override thêm hashCode()** nhá!  
+**Nếu override equals(), mình luôn phải override thêm hashCode()**!  
 
 ###### Contract của hashCode:
 
@@ -234,7 +234,7 @@ HashMap có các khái niệm sau:
 
 ##### Cách methods hoạt động:  
 
-Method put(node): 
+###### Method put(node): 
 1. Check **key == null** ? [chạy **putForNullKey() - table[0]** ] : next step
 2. Tính hash code cho key bằng hashCode()
 3. Tính index lưu node: index = bucket number = hashCode & (n-1)
@@ -244,15 +244,19 @@ Method put(node):
       Ngược lại, tiếp tục.
 4. Hash collision: (Nhiều key cùng index.) Key của node equals() to compare keys đã tồn tại trong bucket trên.
       Nếu key **bằng** key đã tồn tại thì **thay thế** giá trị key cũ.  
-      Nếu **không** thì liên **kết với node đã tồn tại** dạng LinkedList, set next là null.  
+      Nếu **không** thì **liên kết với node đã tồn tại** dạng LinkedList, set next là null.  
 
-Method get(key):  
+###### Method get(key):  
 1. Tính hashCode của key
-2. Tính index
-3. Compare  key bằng equals với first element trong bucket.  
-   Nếu bằng, trả giá trị value. Ngược lại, check next nếu có để check tiếp. Không có trả null.
+2. Tính index của bucket sẽ lưu node cần lấy ra
+3. Compare  key ta có bằng method equals() với first element trong bucket đã tính được ở trên.  
+   Nếu key bằng first key, trả giá trị value của node đó.  
+   Ngược lại thì tiếp tục check key với các node khác trong LinkedList của bucket này.
+   Tức là, mình check field next trong node đang xét: nếu != null thì so sánh key tiếp, ngược lại trả về null.
 
-Như vậy, ta có giảm thiếu số lần search, về dựa vào index tình từ hashCode. Thay vì search all phần từ thành n buckets, sau đó là tìm trong một bucket.
+Như vậy, ta có giảm thiếu số lần search.
+Thay vì search all phần từ, ta dựa vào index của bucket tính bằng hashCode để giảm độ phức tạp của bài toán.  
+Thay vì search n phần tử -> x buckets (x<=n), sau đó là tìm trong một bucket.  
 
 ### Quá khứ và hiện tại   
 
@@ -269,6 +273,7 @@ Bạn có thể sử dụng lombok.
 ví dụ:
 https://github.com/hazoe-dev/samples_effective_java/blob/b0a97811bc1627c0a9e54eb4b2810c3bf735899d/samples_effective_java/src/common_method/lombok/Book.java#L3
 
+Mình nghĩ sẽ đọc thêm về phần này ở đây!
 Declarative Programming in Spring  
 From How to What: The Evolution of Programming Paradigms  
 https://www.ionos.com/digitalguide/websites/web-development/imperative-programming/
