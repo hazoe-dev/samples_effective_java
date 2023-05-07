@@ -23,7 +23,7 @@ Ta có:
         }
     }
 
-![CallStack-Stack-Heap-Diagram](GarbageCollector.png)
+![CallStack-Stack-Heap-Diagram](images/GarbageCollector.png)
 
 Vậy trên heap, 1 Person khoảng bao nhiêu byte nếu 1 reference object giả sử là 8?  
 - Person object : this = 12 byte , gồm:  

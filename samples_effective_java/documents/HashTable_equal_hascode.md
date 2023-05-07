@@ -229,7 +229,7 @@ HashMap có các khái niệm sau:
 * Node chứa key, value.
 
 
-![HashMap](HashMap.png)
+![HashMap](images/HashMap.png)
 
 
 ##### Cách methods hoạt động:

@@ -1,5 +1,3 @@
-package documents;
-
 import java.util.Objects;
 
 public class Person implements Cloneable{

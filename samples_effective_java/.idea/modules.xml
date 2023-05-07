@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/samples_effective_java.iml" filepath="$PROJECT_DIR$/samples_effective_java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle-tutorial.main.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle-tutorial.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle-tutorial.test.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle-tutorial.test.iml" />
     </modules>
   </component>
 </project>
