@@ -2,7 +2,7 @@
 
 ## Tổng quan:
 
-### Lập trình là gì?  
+### Lập trình?  
 - Đưa bài toán, dữ liệu ngoài thực tế vào máy tính bằng ngôn ngữ máy tính, cái máy tính có thể hiểu được dưới dạng 0 và 1.
 - Đưa vào để máy tính giúp ta lưu trữ hay xử lý và giải quyết bài toán.
 - Thông qua ngôn ngữ lập trình -> dòng lệnh -> máy tính thực thi : máy tính hiểu được phải làm gì.
@@ -29,8 +29,8 @@ Một method có nhiều cách hành xử khác nhau tùy thuộc class đang s�
 Để bài toán hiện tại đơn giản hơn,  
 OOP cung cấp encapsulate => che lại những phần xử lý phức tạp   
 Giữ bài toán đơn giản hơn  
-=> Dễ nắm bắt hơn
-
+=> Dễ nắm bắt hơn  
+=> làm lập trình ~ dọn phòng, sắp xếp lại phòng.
 ### Inheritance và composition
 
 OOP với nhiều cách hiện thực khác nhau ta có các design pattern khác nhau.
@@ -57,8 +57,8 @@ is-a
 Cả hai đều là cách reuse -> flexible -> đáp ứng thay đổi  
 SOLID -> O: Open-Closed Principle requires that classes should be open for extension and closed to modification.
 
-Interface -> Trường tượng hóa, tổng quát hóa -> hành động
+Interface -> Trường tượng hóa, tổng quát hóa -> hành động  
 Attributes ~~ properties là implement.
 
-Hình minh họa
+Hình minh họa  
 ![inheritance - composition communication](images/inheritance%20composition%20communication.png)
