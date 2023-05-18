@@ -1,6 +1,6 @@
-package inheritance_composition.composition;
+package inheritance_composition.lombok;
 
-public class Circle implements IShape{
+public class Circle implements IShape {
     IShape shape;
     double radius;
 
@@ -17,7 +17,7 @@ public class Circle implements IShape{
         return Math.PI * radius * radius;
     }
 
-    public String getName(){
+    public String getName() {
         return shape.getName();
     }
 }

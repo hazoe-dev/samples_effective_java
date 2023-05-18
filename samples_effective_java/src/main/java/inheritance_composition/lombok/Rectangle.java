@@ -1,6 +1,6 @@
-package inheritance_composition.composition;
+package inheritance_composition.lombok;
 
-public class Rectangle implements IShape{
+public class Rectangle implements IShape {
     IShape shape;
     private double length;
     private double weight;
@@ -18,7 +18,7 @@ public class Rectangle implements IShape{
 
     @Override
     public double getPerimeter() {
-        return (length + weight)*2;
+        return (length + weight) * 2;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package inheritance_composition.composition;
+package inheritance_composition.lombok;
 
 public class Shape implements IShape {
     private String name;

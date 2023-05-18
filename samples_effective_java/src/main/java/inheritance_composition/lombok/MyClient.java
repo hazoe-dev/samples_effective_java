@@ -1,7 +1,5 @@
-package inheritance_composition.composition;
+package inheritance_composition.lombok;
 
-
-import inheritance_composition.inheritance.Shape;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +21,7 @@ public class MyClient {
         perimeters = shapes.stream().map(IShape::getPerimeter).collect(Collectors.toList());
 
         List<String> names = new ArrayList<>();
-        for (IShape shape: shapes ) {
+        for (IShape shape : shapes) {
             names.add(shape.getName());
         }
     }

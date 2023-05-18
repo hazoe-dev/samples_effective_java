@@ -1,7 +1,6 @@
-package inheritance_composition.composition;
+package inheritance_composition.procedural;
 
 
-import inheritance_composition.inheritance.Shape;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +8,10 @@ import java.util.stream.Collectors;
 
 public class MyClient {
     public static void main(String[] args) {
-        IShape circle = new Circle(4);
-        IShape rectangle = new Rectangle(2, 5);
+        Shape circle = new Shape.ShapeBuilder(Shape.CIRCLE).setRadius(4).build();
+        Shape rectangle = new Shape.ShapeBuilder(Shape.RECTANGLE).setHeight(2).setWeight(5).build();
 
-        List<IShape> shapes = new ArrayList<>();
+        List<Shape> shapes = new ArrayList<>();
         shapes.add(circle);
         shapes.add(rectangle);
 
@@ -20,11 +19,12 @@ public class MyClient {
         areas = shapes.stream().map(shape -> shape.getArea()).collect(Collectors.toList());
 
         List<Double> perimeters = new ArrayList<>();
-        perimeters = shapes.stream().map(IShape::getPerimeter).collect(Collectors.toList());
+        perimeters = shapes.stream().map(Shape::getPerimeter).collect(Collectors.toList());
 
         List<String> names = new ArrayList<>();
-        for (IShape shape: shapes ) {
+        for (Shape shape: shapes ) {
             names.add(shape.getName());
         }
     }
+    
 }
