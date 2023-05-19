@@ -62,3 +62,6 @@ Attributes ~~ properties là implement.
 
 Hình minh họa  
 ![inheritance - composition communication](images/inheritance%20composition%20communication.png)
+
+Ví dụ:
+https://github.com/hazoe-dev/samples_effective_java/tree/inheritance_composition/samples_effective_java/src/main/java/inheritance_composition
