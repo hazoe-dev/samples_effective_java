@@ -12,8 +12,6 @@ public class Rectangle implements IShape {
         this.height = height;
         this.weight = weight;
     }
-
-
     @Override
     public int getArea() {
         return height * weight;
