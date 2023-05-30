@@ -6,4 +6,9 @@ public interface IShape {
     int getPerimeter();
 
     String getName();
+    interface ExcludeShape{
+        int getArea();
+        int getPerimeter();
+    }
 }
+

@@ -4,15 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.Delegate;
-@RequiredArgsConstructor
 public class Rectangle implements IShape{
-    @NonNull
+
     private int height;
-    @NonNull
     private int weight;
 
-    @Delegate
-    final private Shape shape = new Shape("Rectangle.");
+    @Delegate(excludes = ExcludeShape.class)
+    private IShape shape;
+
+    public Rectangle(int height, int weight, IShape shape) {
+        this.height = height;
+        this.weight = weight;
+        this.shape = shape;
+    }
 
     @Override
     public int getArea() {

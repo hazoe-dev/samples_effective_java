@@ -6,8 +6,8 @@ import java.util.stream.Collectors;
 
 public class Client {
     public static void main(String[] args) {
-        IShape circle = new Circle(5);
-        IShape rectangle = new Rectangle(10,2);
+        IShape circle = new Circle(5, (IShape) new Shape("Circle."));
+        IShape rectangle = new Rectangle(10,2, (IShape) new Shape("Rectangle."));
 
         List<IShape> shapes = new ArrayList<>();
         shapes.add(circle);
