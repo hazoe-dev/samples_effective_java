@@ -22,7 +22,7 @@ Chia một class thành nhiều class,
 Với nhiều cách chia tùy thuộc vào requirement   
 mà tổng quát hóa bài toán hiện tại, trường tượng hóa bài toán lên  (Abstraction)  
 Để tách những phần chung ra  
-=> reuse lại code với inheritance / composition
+=> reuse lại code với nhiều cách trong đó có inheritance / composition
 => Và tận dụng được tính đa hình (polymophism)  
 Một method có nhiều cách hành xử khác nhau tùy thuộc class đang sử dụng là gì 
 
@@ -57,6 +57,11 @@ is-a
 Cả hai đều là cách reuse -> flexible -> đáp ứng thay đổi  
 SOLID -> O: Open-Closed Principle requires that classes should be open for extension and closed to modification.
 
+Kết luận:
+Với hai cách reuse inheritance và composition, mình thấy:
+- Inheritance dễ dùng hơn vì bạn có thể kế thừa nhiều phương thức từ class cha mà không cần hiện thực lại
+- Composition linh hoạt hơn vì bạn không bị giới hạn có một loại vì đơn kế thừa.
+
 Interface -> Trường tượng hóa, tổng quát hóa -> hành động  
 Attributes ~~ properties là implement.
 
@@ -64,4 +69,4 @@ Hình minh họa
 ![inheritance - composition communication](images/inheritance%20composition%20communication.png)
 
 Ví dụ:
-https://github.com/hazoe-dev/samples_effective_java/tree/inheritance_composition/samples_effective_java/src/main/java/inheritance_composition
+https://github.com/hazoe-dev/samples_effective_java/tree/compare_inheritance_composition/src/main/java/shape_tool
