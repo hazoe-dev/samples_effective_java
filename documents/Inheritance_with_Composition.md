@@ -53,7 +53,8 @@ is-a
 | **Đơn giản hơn**, bạn chỉ cần extend từ class cha                                                         | Bạn chứa một phần chung và phải expose giống như class bạn chứa                                   |
 | **Làm ít hơn**, method kế thừa từ cha, nếu đủ rồi không cần extend lại làm gì, dư thừa có thể dẫn đến lỗi | Gọi thành phần thêm vào làm cho = deleget, mặc dù đơn giản nhưng code có thể bị lặp với logic này |
 | **Không rõ ràng bằng**, vì kế thừa                                                                        | Nằm ngay trong class hiện thực                                                                    |
-| **Không flexible bằng,** chỉ có 1 class cha                                                               | Đổi object hiện thực của composition ầm ầm                                                        |  
+| **Không flexible bằng,** chỉ có 1 class cha                                                               | Đổi object hiện thực của composition ầm ầm                                                        |    
+
 Cả hai đều là cách reuse -> flexible -> đáp ứng thay đổi  
 SOLID -> O: Open-Closed Principle requires that classes should be open for extension and closed to modification.
 
