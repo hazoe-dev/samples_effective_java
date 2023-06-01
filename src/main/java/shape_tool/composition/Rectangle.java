@@ -1,30 +1,27 @@
 package shape_tool.composition;
 
-import lombok.AllArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
 import lombok.experimental.Delegate;
 public class Rectangle implements IShape{
 
-    private int height;
-    private int weight;
+    private int length;
+    private int width;
 
     @Delegate(excludes = ExcludeShape.class)
     private IShape shape;
 
-    public Rectangle(int height, int weight, IShape shape) {
-        this.height = height;
-        this.weight = weight;
+    public Rectangle(int length, int width, IShape shape) {
+        this.length = length;
+        this.width = width;
         this.shape = shape;
     }
 
     @Override
     public int getArea() {
-        return height * weight;
+        return length * width;
     }
 
     @Override
     public int getPerimeter() {
-        return (height + weight) * 2;
+        return (length + width) * 2;
     }
 }

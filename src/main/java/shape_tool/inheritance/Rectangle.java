@@ -1,22 +1,22 @@
 package shape_tool.inheritance;
 
 public class Rectangle extends Shape {
-    private int height;
-    private int weight;
+    private int length;
+    private int width;
 
-    public Rectangle(int height, int weight,String name) {
+    public Rectangle(int length, int width, String name) {
         super(name);
-        this.height = height;
-        this.weight = weight;
+        this.length = length;
+        this.width = width;
     }
 
     @Override
     public int getArea() {
-        return height * weight;
+        return length * width;
     }
 
     @Override
     public int getPerimeter() {
-        return (height + weight) * 2;
+        return (length + width) * 2;
     }
 }
