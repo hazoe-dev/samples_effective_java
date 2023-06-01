@@ -20,7 +20,7 @@ Khi chương trình thay đổi (Lớn lên với many requirements, những req
 OOP ra đời để giải toán bài toán thích ứng với sự thay đổi  
 Chia một class thành nhiều class,  
 Với nhiều cách chia tùy thuộc vào requirement   
-mà tổng quát hóa bài toán hiện tại, trường tượng hóa bài toán lên  (**Abstraction**)  
+mà tổng quát hóa bài toán hiện tại, trừu tượng hóa bài toán lên  (**Abstraction**)  
 Để tách những phần chung ra  
 => reuse lại code với nhiều cách trong đó có **inheritance** / composition
 => Và tận dụng được tính đa hình (**polymophism**)  
