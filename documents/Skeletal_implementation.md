@@ -33,3 +33,4 @@ But abstract class can support a default method
 Therefore, take carefully before export a method of interface. You can implement as much as possibly to find flaws when you can correct  
 
 Example code for skeletal implementation:
+https://github.com/hazoe-dev/samples_effective_java/tree/skeletal_implementation/src/main/java/skeletal_implementation
