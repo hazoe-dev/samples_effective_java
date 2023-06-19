@@ -24,7 +24,7 @@ Re-use code với interface
 **Ưu điểm:**  
 1. [x] Bạn có thể mở rộng interface cho **bất kì lớp nào**, không nhất thiết là lớp con.
 2. [x] **Không có phần hiện thực**  
-Dẫn đến:
+Dẫn đến:  
    3. [x] Interface rất linh hoạt -> Mỗi implement class là 1 implement riêng, single responsibility -> **an toàn hơn**  
    4. [x] Interface **không quan tâm đến cây phân cấp**  
    -> Bạn có thể kết hợp interface Singer với interface SongWriter   
