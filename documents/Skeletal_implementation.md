@@ -24,14 +24,14 @@ Re-use code với interface
 **Ưu điểm:**  
 1. [x] Bạn có thể mở rộng interface cho **bất kì lớp nào**, không nhất thiết là lớp con.
 2. [x] **Không có phần hiện thực**  
-Dẫn đến:  
-   3. [x] Interface rất linh hoạt -> Mỗi implement class là 1 implement riêng, single responsibility -> **an toàn hơn**  
-   4. [x] Interface **không quan tâm đến cây phân cấp**  
+Dẫn đến:    
+   1. [x] Interface rất linh hoạt -> Mỗi implement class là 1 implement riêng, single responsibility -> **an toàn hơn**  
+   2. [x] Interface **không quan tâm đến cây phân cấp**  
    -> Bạn có thể kết hợp interface Singer với interface SongWriter   
    => Nếu requirement xuất hiện một ca sĩ biết sáng tác  
    -> Ta có SingerSongWriter => interface cho ta ghép tổ hợp chập các class linh hoạt hơn cây phân cấp  
    -> Không bị bùng nổ classes khi muốn kết hợp -> re-use tốt
-   5. [x] Interface **mô phỏng đa kế thừa**  
+   3. [x] Interface **mô phỏng đa kế thừa**  
    -> Bạn có thể implements nhiều hơn 1 interface   
    -> Bạn có thể implement method of interface ở class chắt chút chít  
    -> Vậy nên mixins là một primary function có thể được chỉnh sửa khác nhau tùy thuộc class hiện thực.  
