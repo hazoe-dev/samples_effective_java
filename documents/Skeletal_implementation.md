@@ -63,7 +63,7 @@ Bạn có thể thay là SkeletalInterface mà đó giờ người ta quen cái 
 Tùy thuộc vào requirement bạn có thể thay đổi tùy chỉnh thêm bớt cho phù hợp. Vd: AbstractMap.SimpleEntry  
 
 Vẻ đẹp của bộ khung trên:  
-1. [x] Bạn có implement trong abstract class nên nếu bạn mở rộng enhance interface với new method có thể giảm tác động break compile của các class impl nó.  
+1. Bạn có implement trong abstract class nên nếu bạn mở rộng enhance interface với new method có thể giảm tác động break compile của các class impl nó.  
 Vì bạn có thể khai báo 1 impl cho new method trong abstract ⇒ những class không thay đổi logic có thể không bị ảnh hưởng.
 2. Kế đến, bạn muốn hiện impl của interface ở class con hay cháu đều ok.  
 3. Giờ re-use code thích hơn nha, bạn có impl trong abstract class làm cái khung rồi, 
