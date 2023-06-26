@@ -1,0 +1,35 @@
+# Adapter pattern
+## Khái niệm
+- Là một structural design pattern.
+- Cho phép những interface không tương thích có thể kết hợp với nhau
+
+## Mô hình
+
+
+- Problem
+- Solve = adapter => spirit of design (find from parent = design patterns)
+- Impl của adapter (attach concept, example)
+- Evaluate (analyze pros and cons), compare
+- How to choose
+
+Client muốn show a page in browser
+
+Định dạng dữ liệu nhận được là XMl
+
+Nên không hiển thị page HTML lên browser đúng.
+
+Bạn cần chuyển XML thành HTML + Format
+
+Giả sử, bạn không muốn thêm Ishow của Client vào XMLHandler class vì đâu phải những class khác dùng XMLHandler đều dùng nó
+Bạn cũng không muốn gắn cứng XMLHandler vào IShow phía client vì nó có thể đổi thành JSon hay một định dạng nào khác cho input đầu vào.
+
+Vậy không thể can thiệp vào logic support của cả ISHow và XMLHandler,  bạn cần move nó ra và xứ lý ở một class khác,
+Class này đóng vai trò kết nối 2 interfaces khác nhau lại, nói đúng hơn là hỗ trợ cho 1 bên có interface của bên kia, cụ thể là XMLHandler có interface của IShow.
+
+
+
+
+
+
+
+
