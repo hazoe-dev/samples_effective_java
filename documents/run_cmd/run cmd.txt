@@ -1,0 +1,13 @@
+\New folder>java a.ha
+\New folder\a>java ha.java
+
+New folder>javac shape_tool\factory\*.java
+
+jar cfe Shape.jar shape_tool.factory.Client shape_tool\factory\*.class
+
+jar tf Shape.jar
+
+java -jar Shape.jar
+
+java -version
+javac -version
