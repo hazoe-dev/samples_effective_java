@@ -5,7 +5,7 @@
 Phương án 1: đổi dây sạc khác  
 Phương án 2: đổi điện thoại khác  
 Phương án 3: dùng một đoạn cáp chuyển đổi nhỏ cho dây sạc _ đổi USB type C thành micro USB.  
-![Minh họa](/images/adapter%20example.png)  
+![Minh họa](images/adapter%20example.png)  
 => Cân nhắc đến chi phí, tính tiện dụng => Phương án 3 là perfect nhất.
 
 Và tinh thần của adapter cũng tương tự như phương án 3 kia.
@@ -17,7 +17,7 @@ Adapter pattern là:
 - Cho phép 1 interface được dùng bởi interface khác.
 - Thường không muốn sửa code đã có để thiết kế hay trách nhiệm của các lớp ban đầu không bị chỉnh sửa
 
-![Minh họa](/images/adapter.png)
+![Minh họa](images/adapter.png)
 
 Ưu:
 1. [ ] Single reposibility: Tạo clas adapter làm nhiệm vụ kết nối, không thay đổi trách nhiệm các class cũ   
@@ -30,12 +30,12 @@ Adapter pattern là:
 ## Hiện thực
 Có nhiều các hiện thực, có thể có 3 cách để chuyển một interface thành interface khác mà client mong đợi:
 1. Dùng inheritance: class adapter  
-![Class adapter](/images/class_adapter.png)
+![Class adapter](images/class_adapter.png)
 2. Dùng composition: object adapter  
-   ![Object adapter](/images/object_adapter.png)
+   ![Object adapter](images/object_adapter.png)
 
 3. Dùng nested class  
-   ![Class adapter](/images/Nested_adapter.png)
+   ![Class adapter](images/Nested_adapter.png)
 
 
 Khác nhau giữa các cách trên là 
