@@ -37,7 +37,6 @@ Có nhiều các hiện thực, có thể có 3 cách để chuyển một inter
 3. Dùng nested class  
    ![Class adapter](images/Nested_adapter.png)
 
-
 Khác nhau giữa các cách trên là 
 1. [x] Về mức độ bao đóng hay coupling của chúng.
 - Nest class: truy cập được mọi member variables (private, protected, public) của class Adaptee
@@ -49,7 +48,7 @@ Khác nhau giữa các cách trên là
 3. [x] Composition với inheritance thì composition linh hoạt hơn vì loose coupling hơn. 
  [Chi tiết](https://github.com/hazoe-dev/samples_effective_java/blob/main/documents/Inheritance_with_Composition.md)
 
-
+## So sánh
 So sánh Adapter với decorator pattern, ta có:
 
 | Tiêu chí                  |      Adapter       |             Decorator |
