@@ -20,7 +20,7 @@ Adapter pattern là:
 ![Minh họa](images/adapter.png)
 
 Ưu:
-1. [ ] Single reposibility: Tạo clas adapter làm nhiệm vụ kết nối, không thay đổi trách nhiệm các class cũ   
+1. [ ] Single reposibility: Tạo class adapter làm nhiệm vụ kết nối, không thay đổi trách nhiệm các class cũ   
 -> giữ được tính bao đóng, đơn nhiệm, đơn giản, dễ hiểu  
 -> Maintain tốt
 2. [ ] Class xử lý được tách ra độc lập -> O in SOLID: Open for extensions, close for modification
