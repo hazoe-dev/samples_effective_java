@@ -42,8 +42,8 @@ Khác nhau giữa các cách trên là
 1. [x] Về mức độ bao đóng hay coupling của chúng.
 - Nest class: truy cập được mọi member variables (private, protected, public) của class Adaptee
 - Inheritance: truy cập được ít hơn (public, protected)
-- Composition: truy cập được ít hơn nữa (public)
-  => Single responsibility của chúng tăng dần theo thứ tự trên
+- Composition: truy cập được ít hơn nữa (public)  
+  => Tính single responsibility của chúng tăng dần theo thứ tự trên
   => Tương ứng khả năng mở rộng  
 2. [x] Nếu bạn dùng nested class bạn phải sửa code trong class adaptee -> Điều này có lúc không được chẳng hạn adaptee thuộc về một library khác.
 3. [x] Composition với inheritance thì composition linh hoạt hơn vì loose coupling hơn. 
