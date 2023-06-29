@@ -57,7 +57,7 @@ So sánh Adapter với decorator pattern, ta có:
 | Maintain, hiện thực       | Đơn giản: ít class | Phức tạp: nhiều class |
 | Flexible: re-use, extend  |       ít hơn       |             nhiều hơn |
 
-
+##Code
 Example for adapter:
 
 
