@@ -59,5 +59,6 @@ So sánh Adapter với decorator pattern, ta có:
 
 ##Code
 Example for adapter:
+https://github.com/hazoe-dev/samples_effective_java/tree/adapter-pattern/src/main/java/adapter_pattern
 
 
