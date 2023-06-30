@@ -12,7 +12,7 @@ public class MyClient {
     public MyClient() {
     }
     void show(){
-        JFrame frame = new JFrame("Anonymous class");
+        JFrame frame = new JFrame("Position with adapter");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(100,50, 500,500);
         frame.setVisible(true);
