@@ -6,7 +6,7 @@ import java.awt.*;
 public class MyClient extends MyActionListener{
     public MyClient() {
 
-        JFrame frame = new JFrame("Anonymous class");
+        JFrame frame = new JFrame("Inheritance with adapter");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(100,50, 500,500);
         frame.setVisible(true);
