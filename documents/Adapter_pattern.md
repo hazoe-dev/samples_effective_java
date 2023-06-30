@@ -15,11 +15,11 @@ Adapter pattern là:
 - Là một structure design pattern
 - Cho phép các interface không tương thích kết hợp được với nhau
 - Cho phép 1 interface được dùng bởi interface khác.
-- Thường không muốn sửa code đã có để thiết kế hay trách nhiệm của các lớp ban đầu không bị chỉnh sửa
+- Không sửa code để các lớp ban đầu không thay đổi thiết kế hay trách nhiệm mà tách ra một class mới làm nhiệm vụ chuyển đổi. 
 
 ![Minh họa](images/adapter.png)
 
-Ưu:
+Ưu điểm:
 1. [ ] Single reposibility: Tạo class adapter làm nhiệm vụ kết nối, không thay đổi trách nhiệm các class cũ   
 -> giữ được tính bao đóng, đơn nhiệm, đơn giản, dễ hiểu  
 -> Maintain tốt
@@ -51,11 +51,12 @@ Khác nhau giữa các cách trên là
 ## So sánh
 So sánh Adapter với decorator pattern, ta có:
 
-| Tiêu chí                  |      Adapter       |             Decorator |
-|---------------------------|:------------------:|----------------------:|
-| Tinh thần                 | Convert interface  |    Thêm tính năng mới |
-| Maintain, hiện thực       | Đơn giản: ít class | Phức tạp: nhiều class |
-| Flexible: re-use, extend  |       ít hơn       |             nhiều hơn |
+| Tiêu chí                 |      Adapter       |             Decorator |
+|--------------------------|:------------------:|----------------------:|
+| Tinh thần                | Convert interface  |    Thêm tính năng mới |
+| Maintain, hiện thực      | Đơn giản: ít class | Phức tạp: nhiều class |
+| Flexible: re-use, extend |  Ít flexible hơn   |    Flexible nhiều hơn |
+| Hỗ trợ                   |  Sử dụng (method)  | Tạo mới (Constructor) |
 
 ##Code
 Example for adapter:
