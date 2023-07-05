@@ -14,7 +14,7 @@ Bạn có thể mua điện thoại khác hỗ trợ cổng type C để dùng �
 - Ưu điểm: điện thoại mới đáp ứng được nhu cầu của bạn là ổn nếu không ảnh hưởng đến những nhu cầu khác như danh bạ ...
 - Nhược điểm: nếu ảnh hưởng đến những nhu cầu khác thì bạn phải sửa một khối lượng khổng lồ các cài đặt khác.
 
-Phương án 3: dùng một đoạn cáp chuyển đổi nhỏ cho dây sạc _ đổi USB type C thành micro USB.  
+**Phương án 3:** dùng một đoạn cáp chuyển đổi nhỏ cho dây sạc _ đổi USB type C thành micro USB.  
 Bạn có thể mua một đoạn cáp chuyển đổi USB type C thành micro USB.
 - Ưu điểm: đơn giản, bạn vừa dùng được usb type c lẫn micro usb, hơn nữa bạn không cần đổi dây sạc hay điện thoại.
 - Nhược điểm: tốn phí nhưng ít ảnh hưởng đến những nhu cầu khác hơn nên an toàn hơn
