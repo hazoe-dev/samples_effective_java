@@ -5,22 +5,22 @@
 **Phương án 1: đổi dây sạc khác:**  
 1. [x] Bạn có thể sửa dây bằng cách bỏ đầu sạc cũ và nối đầu sạc mới vào
 2. [x] Bạn có thể mua dây mới   
-- Ưu điểm: bạn hoàn toàn có thể apply nếu dây sạc cũ chỉ có chức năng sạc
+- Ưu điểm: Việc đổi dây sạc thì đơn giản
 - Nhược điểm: nhưng nếu dây sạc cũ với port type c còn hỗ trợ những chức năng khác như truyền data hay xuất màn hình.   
-Bạn phải nhiều chỗ hơn nữa vì nó bị ảnh hưởng.
+Bạn phải sửa nhiều chỗ hơn nữa vì nó bị ảnh hưởng.
 
 **Phương án 2: đổi điện thoại khác**  
 Bạn có thể mua điện thoại khác hỗ trợ cổng type C để dùng được dây sạc
-- Ưu điểm: hoàn toàn có thể apply nếu điện thoại mới đáp ứng được nhu cầu của bạn
-- Nhược điểm: Nhưng nếu không bạn phải sửa một khối khổng lồ các cài đặt khác.
+- Ưu điểm: điện thoại mới đáp ứng được nhu cầu của bạn là ổn nếu không ảnh hưởng đến những nhu cầu khác như danh bạ ...
+- Nhược điểm: nếu ảnh hưởng đến những nhu cầu khác thì bạn phải sửa một khối lượng khổng lồ các cài đặt khác.
 
 Phương án 3: dùng một đoạn cáp chuyển đổi nhỏ cho dây sạc _ đổi USB type C thành micro USB.  
 Bạn có thể mua một đoạn cáp chuyển đổi USB type C thành micro USB.
-- Ưu điểm: đơn giản, bạn vừa dùng được usb type c lần micro usb, gọn nhẹ hơn mua hai dây sạc
-- Nhược điểm: tốn phí nhưng ít hơn các phương án trên.  
+- Ưu điểm: đơn giản, bạn vừa dùng được usb type c lẫn micro usb, hơn nữa bạn không cần đổi dây sạc hay điện thoại.
+- Nhược điểm: tốn phí nhưng ít ảnh hưởng đến những nhu cầu khác hơn nên an toàn hơn
 
 ![Minh họa](images/adapter%20example.png)  
-=> Cân nhắc đến chi phí, tính tiện dụng => Phương án 3 là perfect nhất.
+=> Phương án 3 là perfect nhất.
 
 Và tinh thần của adapter cũng tương tự như phương án 3 kia.
 
@@ -42,7 +42,7 @@ Adapter pattern là:
 
 
 ## Hiện thực
-Có nhiều các hiện thực, có thể có 3 cách để chuyển một interface thành interface khác mà client mong đợi:
+Có nhiều cách hiện thực, có thể có 3 cách để chuyển một interface thành interface khác mà client mong đợi:
 1. Dùng inheritance: hay còn gọi là class adapter  
 ![Class adapter](images/class_adapter.png)
 2. Dùng composition: hay còn gọi là object adapter  
@@ -72,7 +72,7 @@ So sánh Adapter với decorator pattern, ta có:
 | Flexible: re-use, extend |  Ít flexible hơn   |    Flexible nhiều hơn |
 | Hỗ trợ                   |  Sử dụng (method)  | Tạo mới (Constructor) |
 
-##Code
+## Code
 Example for adapter:
 https://github.com/hazoe-dev/samples_effective_java/tree/adapter-pattern/src/main/java/adapter_pattern
 
