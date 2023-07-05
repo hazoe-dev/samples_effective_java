@@ -3,18 +3,16 @@
 1. [x] Bạn có 1 điện thoại dùng cổng sạc mirco USB và dây sạc hỗ trợ USB type C. Vậy làm sao để sạc được?  
    
 **Phương án 1: đổi dây sạc khác:**  
-1. [x] Bạn có thể sửa dây bằng cách bỏ đầu sạc cũ và nối đầu sạc mới vào  
--> Cách này:    
-- Ưu điểm: bạn có thể tận dụng dây sạc đã có   
-- Nhược điểm: phức tạp hơn vì bạn phải biết cách nối dây, khả năng thất bại cao -> mất cả chì lẫn chài   
+1. [x] Bạn có thể sửa dây bằng cách bỏ đầu sạc cũ và nối đầu sạc mới vào
 2. [x] Bạn có thể mua dây mới   
-- Ưu điểm: đơn giản, bạn vừa dùng được usb type c lần micro usb  
-- Nhược điểm: tốn phí, 2 dây rất phiền khi mang đi      
+- Ưu điểm: bạn hoàn toàn có thể apply nếu dây sạc cũ chỉ có chức năng sạc
+- Nhược điểm: nhưng nếu dây sạc cũ với port type c còn hỗ trợ những chức năng khác như truyền data hay xuất màn hình.   
+Bạn phải nhiều chỗ hơn nữa vì nó bị ảnh hưởng.
 
 **Phương án 2: đổi điện thoại khác**  
-Bạn có thể mua điện thoại mới hỗ trợ cổng type C để dùng được dây sạc
-- Ưu điểm: đơn giản nhưng bạn phải có nhiều tiền muốn tiêu
-- Nhược điểm: chi phí cao rất cao mà chỉ để dùng được dây sạc rất không đáng.
+Bạn có thể mua điện thoại khác hỗ trợ cổng type C để dùng được dây sạc
+- Ưu điểm: hoàn toàn có thể apply nếu điện thoại mới đáp ứng được nhu cầu của bạn
+- Nhược điểm: Nhưng nếu không bạn phải sửa một khối khổng lồ các cài đặt khác.
 
 Phương án 3: dùng một đoạn cáp chuyển đổi nhỏ cho dây sạc _ đổi USB type C thành micro USB.  
 Bạn có thể mua một đoạn cáp chuyển đổi USB type C thành micro USB.
