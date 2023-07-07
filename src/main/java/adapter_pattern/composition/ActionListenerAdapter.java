@@ -5,16 +5,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ActionListenerAdapter implements ActionListener {
-    private PanelAdaptee panelAdaptee;
+    private int count;
+    private JLabel label;
 
-    public ActionListenerAdapter(PanelAdaptee panelAdaptee) {
-        this.panelAdaptee = panelAdaptee;
+    //interact with panel adaptee
+    public ActionListenerAdapter(int count, JLabel label) {
+        this.count = count;
+        this.label = label;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        int count = panelAdaptee.getCount()+1;
-        panelAdaptee.setCount(count);
-        panelAdaptee.getLabel().setText("Number clicks: " + count);
+        label.setText("Number clicks: " + count++ );
     }
 }

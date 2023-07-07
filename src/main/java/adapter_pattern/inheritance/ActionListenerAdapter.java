@@ -4,7 +4,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ActionListenerAdapter extends PanelAdaptee implements ActionListener {
+public class ActionListenerAdapter extends MyFrame implements ActionListener {
+    //interact with panel adaptee
     public ActionListenerAdapter() {
         buttonClient.addActionListener(this);
     }

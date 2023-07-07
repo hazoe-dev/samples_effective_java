@@ -5,6 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class MyFrame {
+    private int count = 0;
+    private JLabel label = new JLabel("Number clicks: ");
+    private JButton buttonClient = new JButton("Click");
     public MyFrame() {
 
         JFrame frame = new JFrame("Composition _ Adapter");
@@ -12,12 +15,21 @@ public class MyFrame {
         frame.setBounds(100,50, 500,500);
         frame.setVisible(true);
 
-        PanelAdaptee panelAdaptee = new PanelAdaptee();
+        JPanel panelAdaptee = new JPanel();
         frame.add(panelAdaptee);
 
-        ActionListener actionListener = new ActionListenerAdapter(panelAdaptee);
+        panelAdaptee.setBackground(Color.PINK);
+        panelAdaptee.setSize(500, 500);
+        panelAdaptee.setLayout(new BorderLayout());
 
-        panelAdaptee.getButtonClient().addActionListener(actionListener);
+        panelAdaptee.add(label, BorderLayout.CENTER);
+
+        buttonClient.setSize(150, 30);
+        panelAdaptee.add(buttonClient, BorderLayout.SOUTH);
+
+        ActionListener actionListener = new ActionListenerAdapter(count, label);
+
+        buttonClient.addActionListener(actionListener);
     }
 
     public static void main(String[] args) {
