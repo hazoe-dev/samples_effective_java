@@ -51,7 +51,7 @@ is-a
 | Inheritance                                                                               | Composition                                                                                   |
 |-------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | **Đơn giản hơn**, bạn chỉ cần extend từ class cha                                         | Bạn chứa một phần chung và phải expose giống như class bạn chứa                               |
-| **Làm ít hơn**, method kế thừa từ cha, nếu đủ rồi không cần extend lại làm gì lỗi dư thừa | Gọi thành phần thêm vào làm cho = deleget, mặc dù đơn giản nhưng code có bị trùng với lohic này |
+| **Làm ít hơn**, method kế thừa từ cha, nếu đủ rồi không cần extend lại làm gì lỗi dư thừa | Gọi thành phần thêm vào làm cho = delegate, mặc dù đơn giản nhưng code có bị trùng với logic này |
 | **Không rõ ràng bằng**, vì kế thừa                                                        | Nằm ngay trong class hiện thực                                                                |
 | **Không flexible bằng,** chỉ có 1 class cha                                               | Đổi hiện thực của composition ầm ầm                                                           |
 Cả hai đều là cách reuse -> flexible -> đáp ứng thay đổi  
