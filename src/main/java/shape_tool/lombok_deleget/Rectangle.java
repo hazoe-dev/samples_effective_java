@@ -5,20 +5,20 @@ import lombok.experimental.Delegate;
 public class Rectangle implements IShape {
     @Delegate
     Shape shape = new Shape("Rectangle.");
-    int height;
-    int weight;
+    int length;
+    int width;
 
-    public Rectangle(int height, int weight) {
-        this.height = height;
-        this.weight = weight;
+    public Rectangle(int length, int width) {
+        this.length = length;
+        this.width = width;
     }
     @Override
     public int getArea() {
-        return height * weight;
+        return length * width;
     }
 
     @Override
     public int getPerimeter() {
-        return (height + weight) * 2;
+        return (length + width) * 2;
     }
 }

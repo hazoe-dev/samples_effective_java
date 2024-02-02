@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class Client {
     public static void main(String[] args) {
-        GodShape rectangle = GodShape.builder().height(12).weight(2).type(ShapeType.RECTANGLE).build();
+        GodShape rectangle = GodShape.builder().length(12).width(2).type(ShapeType.RECTANGLE).build();
         GodShape circle = GodShape.builder().radius(5).type(ShapeType.CIRCLE).build();
 
         List<GodShape> shapes = new ArrayList<>();

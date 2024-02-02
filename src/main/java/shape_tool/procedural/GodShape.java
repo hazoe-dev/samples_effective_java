@@ -4,8 +4,8 @@ import lombok.Builder;
 
 @Builder(builderClassName = "BuilderShape")
 public class GodShape {
-    Integer height;
-    Integer weight;
+    Integer length;
+    Integer width;
     Integer radius;
 
     ShapeType type;
@@ -16,7 +16,7 @@ public class GodShape {
                 return (int) (Math.PI * radius * radius);
             case RECTANGLE:
             case SQUARE:
-                return height * weight;
+                return length * width;
             default:
                 System.out.println("Can not recognize shape type!");
                 return 0;
@@ -29,7 +29,7 @@ public class GodShape {
                 return (int) (Math.PI * 2 * radius);
             case RECTANGLE:
             case SQUARE:
-                return (height + weight) * 2;
+                return (length + width) * 2;
             default:
                 System.out.println("Can not recognize shape type!");
                 return 0;

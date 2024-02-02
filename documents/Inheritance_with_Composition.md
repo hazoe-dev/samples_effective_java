@@ -20,7 +20,7 @@ Khi chương trình thay đổi (Lớn lên với many requirements, những req
 OOP ra đời để giải toán bài toán thích ứng với sự thay đổi  
 Chia một class thành nhiều class,  
 Với nhiều cách chia tùy thuộc vào requirement   
-mà tổng quát hóa bài toán hiện tại, trường tượng hóa bài toán lên  (**Abstraction**)  
+mà tổng quát hóa bài toán hiện tại, trừu tượng hóa bài toán lên  (**Abstraction**)  
 Để tách những phần chung ra  
 => reuse lại code với nhiều cách trong đó có **inheritance** / composition
 => Và tận dụng được tính đa hình (**polymophism**)  
@@ -63,7 +63,7 @@ Composition có 1 khái niệm là wrapper.
 VD: bạn có 1 class InstrumentedSet implement Set interface và trong constructor của InstrumentedSet chứa 1 attribute Set.  
 InstrumentedSet is **wrapper** và **wraps** another Set instance.  
 If wrapper chuyển phần xử lý của wrapped class cho wrapped instance (Set instance) thì đó là delegate. 
-Wrapper thì trông giống Decorator pattern.  
+Wrapper được dùng trong Decorator pattern.  
 ![Decorator pattern](images/decorator%20pattern.png)  
 
 Kết luận:
